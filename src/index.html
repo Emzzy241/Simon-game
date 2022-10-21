@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game 1.0</title>
+    <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/styles.css">
+   
+    <!-- in this head section is where you link google fonts and all other game audio's -->
+
+  
+    <!-- linking all audio's for game -->
+    <audio id="clip1">
+        <source src="./audio/simonSound1.mp3">
+        <!-- <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source> -->
+        
+        
+        
+    </audio>
+    <audio id="clip2">
+        <source src="./audio/simonSound2.mp3">
+        <!-- <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source> -->
+    </audio>
+    <audio id="clip3">
+        <source src="./audio/simonSound3.mp3">
+        <!-- <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source> -->
+    </audio>
+    <audio id="clip4">
+        <source src="./audio/simonSound4.mp3">
+        <!-- <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source> -->
+    </audio>
+</head>
+<body>
+
+
+
+    <div id="outer-circle">
+        <div id="topLeft"></div>
+        <div id="topRight"></div>
+        <div id="bottomLeft"></div>
+        <div id="bottomRight"></div>
+        <div id="inner-circle">
+            <div id="title" class="font-effect-emboss">SIMON!</div>
+            <div id="switches">
+                <input type="checkbox" class="toggle" id="on">
+                <button class="button" id="start">Start</button>
+                <input type="checkbox" class="toggle" id="strict">
+            </div>
+            <div class="text1">
+                <span>POWER</span> <span>STRICT</span>
+            </div>
+            <div id="turn"></div>
+            <div class="text2">
+                COUNT
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+    
+</body>
+</html>

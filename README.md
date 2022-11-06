@@ -28,7 +28,7 @@ _Note: the website is designed to run on a web browser just be sure you have one
 _Note: as at the launch of this Application there are no bugs but this is not the finished product as I will be adding more features later on. If anyone comes in contact with a bug, be sure to hit me up on social media or email me @emzzyoluwole@gmail.com. WATCH OUT FOR VERSION 1.1 WHICH IS COMING SOON  _
 
 ## WEBSITE LINK
-https://emzzy241.github.io/ToDo-List/
+https://emzzy241.github.io/Simon-game/
 
 ## License 
 Licensed under the GNU General Public License 

@@ -8,6 +8,22 @@ import audio2 from "./assets/audio/simonSound2.mp3";
 import audio3 from "./assets/audio/simonSound3.mp3";
 import audio4 from "./assets/audio/simonSound4.mp3";
 
+// storing up my applogo and the id's for each sound of the game
+let myAppLogo = document.getElementById("myLogo");
+let myAudioOne = document.getElementById("aud1");
+let myAudioTwo = document.getElementById("aud2");
+let myAudioThree = document.getElementById("aud3");
+let myAudioFour = document.getElementById("aud4");
+
+// workng with the stored Id's
+myAppLogo.href = jsBadgeImage;
+myAudioOne.src = audio1;
+myAudioTwo.src = audio2;
+myAudioThree.src = audio3;
+myAudioFour.src = audio4;
+
+// working with the 
+
 import "./css/styles.css";
 
 
@@ -282,6 +298,7 @@ function gameTurn() {
 // the one function
 
 function one() {
+    
     if (noise) {
         let audio = document.getElementById("clip1");
         // if noise = true, then we store in the clip1 audio file for usage and we play it
@@ -472,11 +489,11 @@ function check() {
 
     // now another branch for if player did not get anyone right
 
-    if(good == false){
-        flashColor(); /* TODO: Stil have to write this function */
+    if (good == false) {
+        flashColor();
         turnCounter.innerHTML = "NO!"
         // all of this branch just means in the turnCounter(the place where we count our score) put in a string "NO!"
-        
+
         // and again we set timeOut to turn the turnCounter to the normal turn number(turn) so it can continue counting 
         // again after some specific amount of milliseconds of showing the "NO" message to user
 
@@ -484,14 +501,14 @@ function check() {
             turnCounter.innerHTML = turn;
             clearColor();
             // we first flash the color above with our function(flashColor()) and then we clear colour again inside the setTimeOut function
-            
+
 
             // also if we're in strict mode we want to do something special
             // running a branch to do something if user turned on the strict mode from scratch
 
-            if(strict){
+            if (strict) {
                 play(); /* this is just for starting the whole game again if its under strct mode and user fails */
-            } else{
+            } else {
                 // so if we're not in strictmode we want to repeat the round
                 // don't forget I said in strict mode when you click the wrong quadrant you start again from scratch
 
@@ -502,7 +519,7 @@ function check() {
                 intervalId = setInterval(gameTurn, 800); /* we are calling the gameTurn function again after every 800 milliseconds  */
             }
 
-        
+
         }, 800);
 
         // we are still in the good == false branch if player got something wrong now we dont want to play any noise
@@ -515,7 +532,7 @@ function check() {
     // we have done the condition if player wins the game, we have also done a condition for if the player gets it wrong
     // now its time for if the condition got it correct and still hasn't won the game yet
 
-    if(turn == playerOrder.length && good && !win){
+    if (turn == playerOrder.length && good && !win) {
         // all I said in this branch is if the turn number(turn... the red box in html) is equal to the length of the playerOrder
         // and that player has been playing really well, and that play has not won we want to turn++(we have now gotten to the next turn)
         turn++; /* going to the next turn */
@@ -524,14 +541,14 @@ function check() {
         flash = 0;
         turnCounter.innerHTML = turn;
         intervalId = setInterval(gameTurn, 800);
-    
+
     }
 
 }
 
 // we defined the flashColor() function above, the other function our check() function needs is the winGame() function
 
-function winGame(){
+function winGame() {
     // first thing we do when someone wins the game is to flash the colors with the flashColor(); function
     flashColor();
     turnCounter.innerHTML = "WIN!" /* turnig the turnCounter screen to a win message */

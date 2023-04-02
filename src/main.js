@@ -16,11 +16,11 @@ let myAudioThree = document.getElementById("aud3");
 let myAudioFour = document.getElementById("aud4");
 
 // workng with the stored Id's
-myAppLogo.href = jsBadgeImage;
-myAudioOne.src = audio1;
-myAudioTwo.src = audio2;
-myAudioThree.src = audio3;
-myAudioFour.src = audio4;
+// myAppLogo.href = jsBadgeImage;
+// myAudioOne.src = audio1;
+// myAudioTwo.src = audio2;
+// myAudioThree.src = audio3;
+// myAudioFour.src = audio4;
 
 // working with the 
 

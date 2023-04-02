@@ -1,13 +1,18 @@
 {
   "name": "Simon Game",
   "version": "1.0.0",
+  "repository": {
+    "url": "git+https://github.com/Emzzy241/Simon-game"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
     "start": "npm run build & webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js",
-    "test": "jest"
+    "test": "jest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +24,7 @@
     "css-loader": "^6.6.0",
     "eslint": "^8.10.0",
     "eslint-webpack-plugin": "^3.1.1",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.5.0",
     "style-loader": "^3.3.1",
